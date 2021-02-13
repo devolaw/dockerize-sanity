@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  sanity:
+    volumes:
+      - ./sanity:/usr/src/app
+    working_dir: /usr/src/app
+    # need to add origin for CORS, https://www.sanity.io/docs/cors-in-cli
+    # sanity cors add http://localhost:8333
+    command: sh -c "yarn global add @sanity/cli && sanity init && sanity cors add http://localhost:8333"

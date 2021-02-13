@@ -1,0 +1,6 @@
+version: "3.8"
+
+services:
+  sanity:
+    container_name: sanity-container
+    image: node:buster
